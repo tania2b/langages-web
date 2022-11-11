@@ -1,0 +1,55 @@
+MOBILE landscape
+
+------  MANQUE ARTICLE -------
+
+#articleCharge{
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 57vw;
+	width: 35vw;
+}
+
+MAIS ne deplace pas la nav vers le bas
+--------------------------------
+.battery{
+	width: 4vw;
+	height: 3vh;
+}
+.icon {
+  right: 45vw;
+}
+
+.carTesla{
+	margin-left: 55px;
+	width: 40%;
+	margin-bottom: 35px;
+}
+
+menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 52vw;
+}
+
+nav{
+	position: absolute;
+	padding-right: 65px;
+	top: 22px;
+	left: 60vw;
+	height: 92vh;
+	overflow-y: scroll;
+}
+
+.arrow {
+    right: 8%;
+}
+
+#imgfooter {
+  width: 22vw;
+}
+
+footer{
+	margin:5%;
+}

@@ -1,0 +1,99 @@
+/*------- Controles -------*/
+@use "mixins" as *;
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+#titrectrl {
+    position: relative;
+    left: 30vw;
+    @include respond(mobileLandscape) {
+        //left: 30vw;
+    }
+    @include respond(tablet and desktop) {
+        left: calc(50vw - 85px);
+    }
+}
+.headoption {
+    margin-top: 50px;
+    @include respond(mobileLandscape) {
+        margin-top: 35px;
+    }
+}
+
+#ctrl_car {
+    position: relative;
+    padding-top: 2%;
+    @include respond(tablet and desktop) {
+        width: 60vw;
+    }
+}
+
+.btn-open {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - 28px);
+    background-color: transparent;
+    border: none;
+    font-size: $subtitle;
+    font-weight: 200;
+    z-index: 1;
+    color: $text-color--dark;
+    cursor: pointer;
+    @include respond(mobileLandscape) {
+        rotate: 90deg;
+        top: 35%;
+        left: calc(45% - 28px);
+    }
+    &:last-of-type {
+        top: 80%;
+        color: $text-color--light;
+        @include respond(mobileLandscape) {
+            top: 35%;
+            left: 13%;
+        }
+    }
+}
+.btn-open:focus {
+    font-weight: bold;
+}
+.open {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 24px);
+    width: 3rem;
+    z-index: 1;
+    @include respond(mobileLandscape) {
+        rotate: 90deg;
+        top: 30%;
+        left: 25%;
+    }
+}
+
+#charge-ctrl {
+    position: absolute;
+    top: 80%;
+    left: 6%;
+    width: 3rem;
+    @include respond(mobileLandscape) {
+        top: 65%;
+        width: 2rem;
+    }
+    @include respond(tablet and desktop) {
+        left: 22%;
+    }
+}
+
+#cartop {
+    height: 75vh;
+    margin: auto;
+    position: relative;
+    filter: drop-shadow(-10px 10px 10px #000000);
+    @include respond(mobileLandscape) {
+        rotate: 90deg;
+        height: 100vh;
+        margin-top: -85px;
+        margin-left: 16vw;
+    }
+}

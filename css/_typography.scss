@@ -1,0 +1,32 @@
+h1 {
+    font-size: $title;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    color: $text-color--light;
+    font-size: $subtitle;
+}
+.nav__title {
+    margin: 0;
+    color: $text-color--light;
+    font-size: $subtitle;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    small {
+        font-weight: 500;
+        color: $text-color--grey;
+        font-size: $description;
+    }
+}
+
+p {
+    margin: 0;
+    font-weight: 500;
+    color: $text-color--grey;
+    font-size: $description;
+    white-space: pre-line;
+}

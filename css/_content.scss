@@ -1,0 +1,178 @@
+@use "mixins" as *;
+
+.carTesla {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    filter: drop-shadow(-10px 10px 10px #000000);
+    @include respond(mobileLandscape) {
+        width: 35%;
+        margin-left: 72px;
+        margin-top: -16px;
+    }
+    @include respond(tabletLandscape and desktop) {
+        margin: auto;
+        width: 30%;
+    }
+}
+
+.access {
+    position: relative;
+    left: -9000px;
+    height: 0px;
+}
+
+#articlenav {
+    @include respond(mobileLandscape) {
+        position: absolute;
+        top: 0;
+        left: 58vw;
+        width: 42%;
+        height: 98vh;
+        overflow-y: scroll;
+    }
+    @include respond(tabletLandscape and desktop) {
+        width: 100%;
+        height: fit-content;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: calc(100% - 6rem);
+    }
+}
+nav {
+    padding-left: 15px;
+    padding-right: 15px;
+    @include respond(tabletLandscape and desktop) {
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        @include respond(tabletLandscape and desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem 1rem;
+            width: 100%;
+            height: max-content;
+            align-items: center;
+        }
+    }
+    li {
+        padding-bottom: 40px;
+        @include respond(tabletLandscape and desktop) {
+            width: 90%;
+            height: min-content;
+            padding: 0;
+            position: relative;
+        }
+    }
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    img {
+        width: 25px;
+    }
+}
+#nav--landscape {
+    @include respond(mobileLandscape) {
+        position: absolute;
+        margin-top: 20px;
+        padding-right: 65px;
+        padding-left: 25px;
+        border-left: 1px solid gray;
+        border-radius: 5px;
+        width: 30vw;
+    }
+    @include respond(tabletLandscape and desktop) {
+        border: none;
+        width: 100%;
+        height: 100% !important;
+        position: static;
+        padding: 0;
+    }
+}
+
+#small-centinelON {
+    display: flex;
+    align-items: center;
+}
+
+#js-centinelON {
+    display: none;
+    height: fit-content;
+    margin-right: 0.5rem;
+}
+.arrow {
+    position: absolute;
+    right: 5%;
+    opacity: 0.5;
+    width: 13px;
+    @include respond(mobileLandscape) {
+        right: 8%;
+    }
+}
+
+.iconesBtn {
+    padding-right: 20px;
+}
+#articleCharge {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #212223;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 15px 25px;
+    @include respond(mobileLandscape) {
+        width: 35vw;
+        margin-bottom: 10px;
+    }
+    @include respond(tabletLandscape and desktop) {
+        width: 40%;
+    }
+}
+
+.h2charge {
+    font-size: 14px;
+}
+.pcharge {
+    font-size: 13px;
+}
+
+/* Progress bar CHARGE */
+.progresscharge {
+    background-color: #2d2f33;
+    border: #202324 1px solid;
+    border-radius: 45px;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include respond(mobileLandscape) {
+        width: 35vw;
+    }
+
+    /* For Chrome or Safari */
+    &::-webkit-progress-value {
+        background-color: #61d487 !important;
+    }
+
+    /* For Firefox */
+    &::-moz-progress-bar {
+        background-color: #61d487 !important;
+    }
+}
+
+#btn-regulcharge {
+    display: flex;
+    justify-content: space-between;
+}

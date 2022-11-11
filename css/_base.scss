@@ -1,0 +1,29 @@
+@use "mixins" as *;
+
+body {
+    background: $main-background-color;
+    font-size: 20px;
+    color: $text-color--light;
+    font-family: $text-font;
+    margin-right: 15px;
+    margin-left: 15px;
+    @include respond(tabletLandscape) {
+        display: grid;
+        gap: 2rem;
+    }
+    @include respond(desktop) {
+        display: grid;
+        gap: 4rem;
+    }
+}
+
+@include respond(tabletLandscape and desktop) {
+    .container-lg {
+        width: 100%;
+        max-width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

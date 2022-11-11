@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset = "utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Tesla Main</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <section>
+       <h1>Simone</h1>
+       <progress value="71" max="100" class="battery"></progress>71% 
+        <p>Stationnée</p> 
+    </section>
+    <a href="#" class="icon">
+      <img src="icones/icon_profil.png" class="iconProfile" alt="">
+    </a>
+  </header>
+
+  <img src="/img/tesla.png" id="tesla" class="carTesla"  alt="">
+
+
+  <h1 class="access">Boutons contrôle du véhicule</h1>
+  <menu id="menu">
+     <li><button id="centinelToggle"><img src="icones/centinel.png" id="centinelimg" alt="activation mode centinel"></button></li>
+      <li><button id="ventilationToggle"><img src="icones/ventilation.png" id="ventilationimg" alt="activation ventilation"></button></li>
+     <li><button id="chargeToggle"><img src="icones/charge.png" id="chargeimg" alt="activation charge"></button></li>
+      <li><button id="coffreToggle"><img src="icones/coffre.png" id="coffreimg" alt="ouvrir coffre" ></button></li>
+  </menu>
+
+  <section id="articlenav" class="container-lg">
+    <article id="articleCharge">
+          <h2 class="h2charge">Limite charge : 100%</h2>
+          <progress value="60" max="100" class="progresscharge"></progress>
+          <p class="pcharge">24 kWh ajoutés durant la dernière recharge </p>
+          <button id="btn-regulcharge">
+            <a id="minus"><</a>
+            <p id="num">16A</p>
+            <a id="plus">></a>
+          </button>
+    </article>
+
+    <nav id="nav--landscape" >
+      <ul>
+        <li>
+          <a href="controle.html">
+            <img src="icones/controle.png" class="iconesBtn" alt="">
+            <p class="nav__title">Contrôles</p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#ventilation.html">
+              <img src="icones/ventilation.png" class="iconesBtn" alt="">  
+              <p class="nav__title">Ventilation
+                <small id="js-option--active"> Intérieur 23°C </small>
+              </p> 
+              <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#position.html">  
+            <img src="icones/position.png" class="iconesBtn" alt="">
+            <p class="nav__title">Position  
+              <small>13 Rue Paul Guigou</small>
+            </p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#planifier.html">
+            <img src="icones/planifier.png" class="iconesBtn" alt="">
+            <p class="nav__title">Planifier </p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#securite.html">
+            <img src="icones/securite.png" class="iconesBtn" alt="">
+            <p class="nav__title">Sécuriter et conducteurs 
+              <small id="small-centinelON"> <img id="js-centinelON" src="icones/centinelON.png"> iMoi - Connectée</small>
+            </p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#stat.html">
+            <img src="icones/stat.png" class="iconesBtn" alt="">
+            <p class="nav__title">Stats recharge </p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#miseAniv.html">
+            <img src="icones/niveau.png" class="iconesBtn" alt="">
+            <p class="nav__title">Mise à niveau</p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#service.html">
+            <img src="icones/service.png" class="iconesBtn" alt="">
+            <p class="nav__title">Service</p>
+            <img src="icones/white-arrow.png" class="arrow" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <footer>
+    <hr>
+    <img id="imgfooter" src="img/model.jpg">
+  </footer>
+
+  <script src="js/script.js"></script>
+  </body>
+  </html>

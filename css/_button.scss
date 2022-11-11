@@ -1,0 +1,113 @@
+@use "mixins" as *;
+
+menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 10px;
+    @include respond(mobileLandscape) {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 1rem;
+        list-style: none;
+        width: 52vw;
+    }
+    @include respond(tabletLandscape and desktop) {
+        max-width: 90%;
+        justify-content: space-evenly;
+    }
+    li button {
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        color: $text-color--grey;
+        font-size: $description;
+        cursor: pointer;
+    }
+    img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+#plus,
+#minus {
+    display: block;
+    text-decoration: none;
+    color: $text-color--light;
+    font-size: $subtitle;
+    padding: 0 10px;
+}
+
+#ctrl_menu {
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+
+    @include respond(mobileLandscape) {
+        top: 29vh;
+        right: 5vw;
+        max-width: 225px;
+        flex-wrap: wrap;
+    }
+    @include respond(tabletLandscape and desktop) {
+        top: calc(50vh - 128px);
+        right: 18vw;
+        max-width: 225px;
+        max-height: 350px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    @include respond(desktop) {
+        right: 25vw;
+    }
+    li {
+        padding: 30px 13px;
+        @include respond(mobileLandscape and tabletLandscape and desktop) {
+            padding: 0 13px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    button {
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        width: 7vw;
+        height: auto;
+        padding-bottom: 10px;
+        @include respond(mobileLandscape) {
+            width: 5vw;
+        }
+        @include respond(tablet) {
+            width: 4vw;
+        }
+        @include respond(tabletLandscape and desktop) {
+            width: 3vw;
+        }
+    }
+}
+
+.retour {
+    position: absolute;
+    left: 35px;
+    text-decoration: none;
+    color: $text-color--light;
+    font-size: $title;
+}
+
+#btn-regulcharge {
+    background-color: #333333;
+    border: #333333 1px solid;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 15px 5px;
+}
+#btn-regulcharge p {
+    color: $text-color--light;
+}

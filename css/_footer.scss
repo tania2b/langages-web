@@ -1,0 +1,29 @@
+@use "mixins" as *;
+
+footer {
+    @include respond(mobileLandscape) {
+        display: none;
+    }
+    @include respond(tabletLandscape) {
+        margin: 0;
+        position: fixed;
+        width: 98%;
+        bottom: 0;
+    }
+    @include respond(desktop) {
+        position: static;
+    }
+}
+
+#imgfooter {
+    width: 45vw;
+    @include respond(mobileLandscape) {
+        width: 22vw;
+    }
+    @include respond(tablet) {
+        width: 40vw;
+    }
+    @include respond(tabletLandscape and desktop) {
+        width: 10vw;
+    }
+}

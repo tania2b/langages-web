@@ -1,0 +1,69 @@
+@use "mixins" as *;
+
+.icon {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    @include respond(mobileLandscape) {
+        right: 45vw;
+    }
+    @include respond(tabletLandscape) {
+        right: 5vw;
+    }
+    @include respond(desktop) {
+        right: 8%;
+    }
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: blue;
+        position: absolute;
+        bottom: 10px;
+        right: 6px;
+    }
+}
+
+.iconProfile {
+    width: 50px;
+}
+
+header {
+    margin-top: 25px;
+    margin-left: 15px;
+    width: fit-content;
+    @include respond(tabletLandscape and desktop) {
+        margin-left: 3rem;
+    }
+}
+
+/* Progress bar BATTERY */
+.battery {
+    padding: 3px;
+    border-radius: 5px;
+    width: 30px;
+    height: 13px;
+    -webkit-appearance: none;
+    margin-right: 10px;
+    border: 1px solid black;
+    background-color: #2d2f33;
+
+    /* For Chrome or Safari */
+    &::-webkit-progress-bar {
+        background-color: #2d2f33;
+        width: 30px;
+        height: 13px;
+    }
+
+    &::-webkit-progress-value {
+        background-color: $text-color--grey;
+        width: 30px;
+        height: 13px;
+        margin-top: -7px;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $text-color--grey;
+    }
+}
